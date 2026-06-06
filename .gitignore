@@ -1,3 +1,11 @@
-._*
-_MACOSX/
+# Archivos del sistema operativo (Mac y Windows)
 .DS_Store
+Thumbs.db
+
+# Dependencias y librerías de Node (en caso de usarse a futuro)
+node_modules/
+
+# Archivos temporales de editores de código
+.vscode/
+.idea/
+*.log
