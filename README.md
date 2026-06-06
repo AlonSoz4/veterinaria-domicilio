@@ -1,7 +1,7 @@
 Markdown
 # LomitosVet - Landing Page Veterinaria a Domicilio
 
-Landing Page desarrollada para **LomitosVet**, un servicio de atención veterinaria médica a domicilio en Santiago de Chile. El sitio web ha sido maquetado utilizando estándares modernos de desarrollo Frontend, asegurando una experiencia de usuario óptima, accesibilidad internacional y un diseño adaptativo.
+Landing Page desarrollada para **LomitosVet**, un servicio de atención veterinaria a domicilio en Santiago de Chile. El sitio web ha sido estructurado utilizando estándares modernos de desarrollo Frontend, asegurando una experiencia de usuario óptima, accesibilidad internacional y un diseño adaptativo.
 
 ## Características del Proyecto
 
@@ -16,7 +16,7 @@ Landing Page desarrollada para **LomitosVet**, un servicio de atención veterina
 ## Estructura de Carpetas
 
 La arquitectura del proyecto sigue una estructura limpia, separando los recursos de desarrollo dentro del directorio de código fuente (`src/`):
-
+```text
 VETERINARIA-DOMICILIO/
 │
 ├── index.html          # Documento HTML principal y estructura semántica del sitio
@@ -31,7 +31,7 @@ VETERINARIA-DOMICILIO/
     │
     └── assets/         # Recursos multimedia y activos de diseño
         └── img/
-            ├── logo-lomitosvet.jpg  # Logotipo oficial de la marca (renderizado por IA)
+            ├── logo-lomitosvet.jpg  # Logotipo oficial de la marca (los logos y las imagenes fueron renderizados por IA)
             ├── nosotros.png         # Imagen para la sección corporativa de presentación
             ├── tutor-bruno.jpg      # Fotografía para la tarjeta de testimonio de Bruno
             ├── tutor-odin.jpg       # Fotografía para la tarjeta de testimonio de Odín
