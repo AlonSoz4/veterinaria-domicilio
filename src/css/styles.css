@@ -1,0 +1,152 @@
+/* ==========================================================================
+   1. RESETEO GLOBAL Y VARIABLES DE IDENTIDAD
+   ========================================================================== */
+
+:root {
+    --color-principal: #00b4d8;      
+    --color-oscuro: #2b2d42;         
+    --color-claro: #f8f9fa;          
+    --color-blanco: #ffffff;
+    --color-gris-linea: #e2e8f0;
+    --fuente-titulos: 'Fredoka', sans-serif;
+    --fuente-texto: 'sans-serif', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: var(--fuente-texto);
+    background-color: var(--color-claro);
+    color: var(--color-oscuro);
+    line-height: 1.6;
+    font-size: 16px; 
+}
+
+/* ==========================================================================
+   2. BARRA DE NAVEGACIÓN (HEADER & NAV)
+   ========================================================================== */
+
+header {
+    background-color: var(--color-blanco); /* Ocupa el color blanco de nuestras variables */
+    position: sticky;        /* Hace que el menú se quede fijo arriba al hacer scroll */
+    /* top: 0;                  /* Se pega al techo exacto de la pantalla */
+    z-index: 1000;           /* Asegura que el menú siempre pase por encima de las fotos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Una sombra sutil abajo para darle volumen */
+}
+
+nav {
+    display: flex;           /* ¡Activamos Flexbox aquí! */
+    justify-content: flex-start; /* Empuja el logo a la derecha y el menú a la derecha */
+    align-items: center;            /* Alinea el logo y las letras verticalmente al centro */
+    max-width: 1200px;              /* El menú no se estirará más allá de este ancho */
+    margin: 0 auto;                 /* Centra toda la barra en monitores grandes */
+    padding: 4px 20px;             /* Espacio interno para que no quede todo pegado */
+    width: 100%;       
+    /* Agregamos una separación entre el bloque del logo y el bloque del menú */
+    
+}
+
+/* AJUSTE DEL TAMAÑO DE LA IMAGEN DEL LOGO */
+.logo-img {
+    height: 130px;            /* Forzamos a que el logo mida tantos px de alto */
+    width: auto;             /* El ancho se calcula solo para no deformar la imagen */
+    display: block;          /* Elimina un espacio en blanco fantasma que traen las imágenes abajo */
+}
+
+/* La lista <ul> del menú */
+nav ul {
+    display: flex;           /* Volvemos a usar Flexbox para poner los enlaces en fila */
+    list-style: none;        /* Le quita los puntitos negros que traen las listas por defecto */
+    gap: 24px;               /* Separa cada palabra del menú por 24 píxeles de distancia */
+}
+
+/* Las etiquetas de los enlaces <a> dentro del menú */
+nav ul li a {
+    text-decoration: none;   /* Le quita la línea subrayada azul que traen los enlaces */
+    color: var(--color-oscuro); /* Usa nuestro gris oscuro legible */
+    font-weight: 500;        /* Hace la letra un poquito más gruesa que la normal */
+    font-size: 1rem;         /* Adopta los 16px base que definimos en el body */
+    transition: color 0.2s ease; /* Hace que el cambio de color sea suave, no de golpe */
+}
+
+/* El efecto "Hover" (Cuando pasas la flecha del mouse por encima) */
+nav ul li a:hover {
+    color: var(--color-principal); /* Cambia al azul de LomitosVet al pasar el mouse */
+}
+
+/* ==========================================================================
+   3. SECCIÓN PORTADA (HERO)
+   ========================================================================== */
+
+.hero {
+    background-color: #e2f1f5; /* Un fondo celeste cielo muy suave y limpio */
+    padding: 100px 20px;       /* Colchón de espacio amplio arriba/abajo y a los lados */
+    text-align: center;        /* Centra de golpe todos los textos y botones internos */
+}
+
+.hero-content {
+    max-width: 800px;          /* Restringe el ancho del bloque de texto */
+    margin: 0 auto;            /* Centra de forma horizontal todo el bloque */
+}
+
+.hero h1 {
+    font-size: 2.8rem;         /* Letra grande e importante para el título principal */
+    color: var(--color-oscuro);/* Ocupa el gris oscuro de nuestra variable */
+    margin-bottom: 20px;       /* Empuja el párrafo hacia abajo para que no se pegue */
+    line-height: 1.2;          /* Controla el espacio entre las líneas del título */
+}
+
+.hero p {
+    font-size: 1.2rem;         /* Un tamaño un poco mayor al normal para destacar */
+    color: #4a5568;            /* Un gris intermedio muy agradable para la lectura */
+    margin-bottom: 40px;       /* Separa el texto de los botones de abajo */
+}
+
+/* Contenedor que agrupa ambos botones */
+.hero-buttons {
+    display: flex;             /* Activamos Flexbox para ponerlos en fila */
+    justify-content: center;   /* Los centramos perfectamente al medio de la portada */
+    gap: 20px;                 /* Deja una separación de 20px entre ambos botones */
+}
+
+/* ESTILO BASE (Aplica a los dos botones por igual) */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 14px 28px;        /* Colchón interno: 14px arriba/abajo y 28px a los lados */
+    font-family: var(--fuente-texto);
+    font-weight: 600;          /* Letra un poco más gruesa para que resalte */
+    text-decoration: none;     /* Le quita el subrayado feo de los enlaces comunes */
+    border-radius: 30px;       /* Bordes totalmente curvos y amigables (estilo pastilla) */
+    transition: all 0.3s ease; /* Transición: suaviza cualquier animación en 0.3 segundos */
+}
+
+/* BOTÓN PRINCIPAL (Reservar Hora - El objetivo número uno de la página) */
+.btn-primary {
+    background-color: var(--color-principal); /* Ocupa el azul de tu variable */
+    color: var(--color-blanco);               /* Texto blanco para un contraste perfecto */
+    box-shadow: 0 4px 14px rgba(0, 180, 216, 0.3); /* Sombra difuminada con el mismo tono azul */
+}
+
+/* Interacción con el mouse para el Botón Principal */
+.btn-primary:hover {
+    background-color: #0077b6;   /* Se vuelve un azul más oscuro y clínico */
+    transform: translateY(-3px); /* MICROANIMACIÓN: El botón salta 3px hacia arriba */
+}
+
+/* BOTÓN SECUNDARIO (Ver Servicios - Para los que quieren vitrinear antes) */
+.btn-secondary {
+    background-color: transparent;            /* Sin fondo de relleno (estilo fantasma) */
+    color: var(--color-principal);            /* El texto es azul */
+    border: 2px solid var(--color-principal); /* Le dibujamos solo un contorno azul */
+}
+
+/* Interacción con el mouse para el Botón Secundario */
+.btn-secondary:hover {
+    background-color: var(--color-principal); /* Se rellena de azul por completo */
+    color: var(--color-blanco);               /* El texto cambia a blanco para contrastar */
+    transform: translateY(-3px);              /* También salta 3px hacia arriba */
+}
