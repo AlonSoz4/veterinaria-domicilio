@@ -649,3 +649,69 @@ footer p {
 .footer-links a:hover {
     color: var(--color-principal);          /* Se tiñen del azul de la marca al pasar el mouse */
 }
+
+/* ==========================================================================
+   10. REGLAS RESPONSIVAS (MÓVIL ≤ 768px) 
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* Barra de Navegación */
+    nav {
+        flex-direction: column;  /* Coloca el logo arriba y el menú abajo */
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;         /* Si los enlaces no caben, bajan de forma ordenada */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Portada (Hero) */
+    .hero h1 {
+        font-size: 2rem;         /* Achica el título principal para que no se corte */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;  /* Apila los botones uno arriba del otro */
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* Sección Nosotros */
+    .about-content {
+        flex-direction: column;  /* Pasa de 2 columnas a 1 columna vertical */
+        gap: 30px;
+        text-align: center;
+    }
+
+    /* Sección Servicios (Grilla pasa de 4 columnas a 1 sola columna) */
+    .service-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    /* Sección Testimonios */
+    .testimonials-grid {
+        flex-direction: column;  /* Apila las tarjetas de testimonios en vertical */
+        gap: 20px;
+    }
+
+    /* Formulario de Contacto */
+    .booking-form {
+        padding: 25px 20px;      /* Reduce los márgenes internos en pantallas pequeñas */
+    }
+
+    /* Pie de Página (Footer cambia de 3 columnas a un flujo vertical) */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
