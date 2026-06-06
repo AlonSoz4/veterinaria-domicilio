@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LomitosVet - Veterinaria a Domicilio</title>
+
+    <link rel="icon" type="image/png" href="src/assets/img/logo-lomitosvet.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Changa+One&family=Fredoka:wght@400;600;700&family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
@@ -92,7 +95,7 @@
         </div>
     </section>
 
-<!-- Aqui utilizaremos una tabla de precios -->
+<!-- tabla de precios -->
 
     <section id="precios" class="pricing">
     <div class="pricing-container">
@@ -187,7 +190,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE TESTIMONIOS (CON RECURSOS MULTIMEDIA) -->
+  <!-- testimonios -->
     <section id="testimonios" class="testimonials">
         <div class="testimonials-container">
             <h2>Opiniones de Nuestros Clientes</h2>
@@ -220,6 +223,61 @@
                 </article>
 
             </div>
+        </div>
+    </section>
+
+<!-- contacto/formulario -->
+    <section id="contacto" class="contact">
+        <div class="contact-container">
+            <h2>Reserva una Atención a Domicilio</h2>
+            <p class="subtitle">Completa el formulario y nos pondremos en contacto contigo para confirmar la visita.</p>
+
+            <form action="#" method="POST" class="booking-form">
+                
+                <div class="form-group">
+                    <label for="nombre-tutor">Nombre Completo del Tutor:</label>
+                    <input type="text" id="nombre-tutor" name="nombre-tutor" placeholder="Ej: Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono de Contacto:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: +56912345678" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre-mascota">Nombre de la Mascota:</label>
+                    <input type="text" id="nombre-mascota" name="nombre-mascota" placeholder="Ej: Firulais" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo-mascota">Tipo de Mascota:</label>
+                    <select id="tipo-mascota" name="tipo-mascota" required>
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="perro">Perro 🐶</option>
+                        <option value="gato">Gato 🐱</option>
+                        <option value="otro">Otro / Exótico 🐹</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicio-select">Servicio Requerido:</label>
+                    <select id="servicio-select" name="servicio-select" required>
+                        <option value="">-- Selecciona el servicio --</option>
+                        <option value="consulta">Consulta Veterinaria General ($15.000)</option>
+                        <option value="vacuna">Vacunación y Desparasitación ($12.000 / $14.000)</option>
+                        <option value="examenes">Exámenes de Laboratorio ($20.000)</option>
+                        <option value="urgencia">🚨 Atención de Urgencias ($35.000 base)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivo">Cuéntanos brevemente el motivo de la consulta:</label>
+                    <textarea id="motivo" name="motivo" rows="4" placeholder="Ej: Control sano, le toca su vacuna anual, presenta decaimiento..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Solicitar Reserva de Visita</button>
+
+            </form>
         </div>
     </section>
 </body>
