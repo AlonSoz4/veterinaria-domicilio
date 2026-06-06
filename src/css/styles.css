@@ -150,3 +150,499 @@ nav ul li a:hover {
     color: var(--color-blanco);               /* El texto cambia a blanco para contrastar */
     transform: translateY(-3px);              /* También salta 3px hacia arriba */
 }
+
+/* ==========================================================================
+   4. SECCIÓN NOSOTROS (ABOUT)
+   ========================================================================== */
+
+.about {
+    background-color: var(--color-blanco); /* Usamos fondo blanco para contrastar con el celeste de arriba */
+    padding: 80px 20px;                    /* Espaciado regular arriba y abajo */
+}
+
+.about-content {
+    display: flex;           /* ¡Activamos Flexbox para armar las dos columnas! */
+    align-items: center;     /* Alinea verticalmente el texto y la foto para que queden centrados entre sí */
+    gap: 50px;               /* Deja una separación de 50px de distancia entre la columna de texto y la foto */
+    max-width: 1200px;       /* Ancho máximo alineado con la barra de navegación */
+    margin: 0 auto;          /* Centra todo el bloque en la pantalla */
+}
+
+/* Columna Izquierda: El Bloque de Texto */
+.about-text {
+    flex: 1;                 /* Le dice al navegador que esta columna use el 50% del espacio disponible */
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    color: var(--color-oscuro);
+    margin-bottom: 15px;     /* Separa el título principal del subtítulo */
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--color-principal); /* El subtítulo destaca con el azul clínico */
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about p {
+    margin-bottom: 15px;     /* Separa un párrafo del otro para que no queden apelotonados */
+    color: #4a5568;          /* Gris intermedio para una lectura descansada */
+}
+
+/* Columna Derecha: El Contenedor de la Foto */
+.about-image {
+    flex: 1;                 /* Le dice al navegador que esta columna use el otro 50% del espacio */
+}
+
+/* CONTROL DE TAMAÑO DE LA IMAGEN DE NOSOTROS */
+.about-img {
+    width: 100%;             /* La foto ocupará de forma exacta el 100% de su columna del 50% */
+    height: auto;            /* Mantiene la proporción original para que no se deforme ni se achate */
+    border-radius: 20px;     /* Esquinas redondeadas y amigables alineadas a la marca */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave para darle volumen y profundidad */
+}
+
+/* ==========================================================================
+   5. SECCIÓN SERVICIOS (SERVICES)
+   ========================================================================== */
+
+.services {
+    background-color: var(--color-claro); /* Un fondo gris/celeste muy tenue para separar secciones */
+    padding: 80px 20px;
+    text-align: center;                  /* Centra los títulos principales de la sección */
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    font-size: 2.2rem;
+    color: var(--color-oscuro);
+    margin-bottom: 10px;
+}
+
+/* LA REGLA MAESTRA: LA GRILLA CON CSS GRID */
+.service-grid {
+    display: grid;              /* ¡Activamos el sistema CSS Grid! */
+    grid-template-columns: repeat(4, 1fr); /* Divide la pantalla en 4 columnas exactamente iguales */
+    gap: 25px;                  /* Deja una separación matemática perfecta de 25px entre las tarjetas */
+    margin-top: 50px;           /* Separa la grilla del texto introductorio de arriba */
+}
+
+/* Diseño Estético de cada Tarjeta de Servicio (article) */
+.service-card {
+    background-color: var(--color-blanco);
+    padding: 30px 20px;
+    border-radius: 16px;        /* Bordes redondeados sutiles */
+    text-align: left;           /* El texto interno de la tarjeta se lee alineado a la izquierda */
+    border: 1px solid var(--color-gris-linea); /* Un borde gris muy delgadito para definir la caja */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02); /* Una sombra casi invisible para dar un look limpio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Prepara la tarjeta para la animación */
+}
+
+/* Interacción con el mouse (Hover) para las tarjetas */
+.service-card:hover {
+    transform: translateY(-5px); /* La tarjeta se eleva 5px de forma muy fluida */
+    box-shadow: 0 12px 25px rgba(0, 180, 216, 0.12); /* La sombra se vuelve azul e intensa al flotar */
+}
+
+/* El círculo contenedor de los Emojis (🩺, 💉, 🩸, 🏥) */
+.service-icon {
+    font-size: 2rem;            /* Agranda el emoji para que se note */
+    background-color: #e2f1f5;  /* Círculo con el fondo celeste suave de la portada */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    /* Estas tres líneas centran el emoji perfectamente al medio del círculo */
+    border-radius: 50%;         /* Transforma la cajita cuadrada en un círculo perfecto */
+    margin-bottom: 20px;        /* Separa el icono del título del servicio */
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    color: var(--color-oscuro);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.service-card p {
+    font-size: 0.95rem;         /* Letra levemente más compacta para las descripciones */
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   6. SECCIÓN TARIFAS (PRICING)
+   ========================================================================== */
+
+.pricing {
+    background-color: var(--color-blanco); /* Fondo blanco limpio para hacer contraste */
+    padding: 80px 20px;
+}
+
+.pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing h2 {
+    font-size: 2.2rem;
+    color: var(--color-oscuro);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Títulos individuales de cada tabla (h3) */
+.table-title {
+    font-size: 1.4rem;
+    color: var(--color-oscuro);
+    margin-top: 40px;      /* Separa la tabla del contenido que venga arriba */
+    margin-bottom: 15px;   /* Separa el título de la tabla misma */
+}
+
+.table-subtitle {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 20px;
+}
+
+/* CONTENEDOR RESPONSIVE (Punto clave de la rúbrica) */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;      /* Si la tabla es muy ancha en celulares, activa un scroll horizontal suave */
+    margin-bottom: 30px;
+}
+
+/* ESTILO GENERAL DE LAS TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina el espacio doble feo que traen los bordes de tabla por defecto */
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    overflow: hidden;          /* Fuerza a que los bordes de adentro respeten la curvatura de la tabla */
+    border: 1px solid var(--color-gris-linea);
+}
+
+/* Encabezados de la Tabla (th) */
+table th {
+    background-color: var(--color-principal); /* Fondo azul clínico de tu variable */
+    color: var(--color-blanco);               /* Texto blanco para un contraste de lectura óptimo */
+    font-family: var(--fuente-titulos);       /* Tu tipografía corporativa recta */
+    font-weight: 600;
+    padding: 14px 18px;
+    text-align: left;                         /* Alinea el texto a la izquierda */
+    font-size: 0.95rem;
+}
+
+/* Celdas de Contenido (td) */
+table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--color-gris-linea); /* Línea divisoria fina entre filas */
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+/* TRUCO VISUAL: Filas intercaladas (Zebra Striping) */
+table tbody tr:nth-child(even) {
+    background-color: #f8fafc; /* Las filas pares tendrán un fondo grisáceo casi imperceptible */
+}
+
+/* BLOQUE DE NOTAS DE ADVERTENCIA (blockquote) */
+.table-note {
+    background-color: #fffbeb;  /* Un fondo amarillo/crema muy suave de advertencia */
+    border-left: 4px solid #f59e0b; /* Barra vertical gruesa de color ámbar a la izquierda */
+    padding: 20px;
+    border-radius: 4px 12px 12px 4px;
+    margin: 35px 0;
+}
+
+.table-note p {
+    font-size: 0.95rem;
+    color: #b45309;             /* Café/Óxido oscuro para que resalte y contraste perfectamente */
+    margin-bottom: 10px;
+}
+
+/* Elimina el margen del último párrafo de la nota para evitar aire extra */
+.table-note p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   7. SECCIÓN TESTIMONIOS (TESTIMONIALS)
+   ========================================================================== */
+
+.testimonials {
+    background-color: var(--color-claro); /* Volvemos al gris/celeste suave para contrastar */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials h2 {
+    font-size: 2.2rem;
+    color: var(--color-oscuro);
+    margin-bottom: 10px;
+}
+
+/* CONTENEDOR DE LAS TARJETAS (FLEXBOX) */
+.testimonials-grid {
+    display: flex;             /* Ponemos las tres tarjetas una al lado de la otra */
+    gap: 30px;                 /* Separación de 30px entre cada opinión */
+    margin-top: 50px;
+}
+
+/* La tarjeta individual (article) */
+.testimonial-card {
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: left;          /* El texto de la opinión se lee hacia la izquierda */
+    flex: 1;                   /* Fuerza a las 3 tarjetas a medir exactamente lo mismo de ancho */
+    border: 1px solid var(--color-gris-linea);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;    /* Ordena el contenido de la tarjeta en vertical (Título -> Estrellas -> Texto -> Autor) */
+    justify-content: space-between; /* Empuja el autor hacia el fondo de la tarjeta si un texto es más largo que otro */
+}
+
+.testimonial-card h3 {
+    font-size: 1.15rem;
+    color: var(--color-oscuro);
+    margin-bottom: 8px;
+}
+
+.testimonial-rating {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.testimonial-text {
+    font-size: 0.95rem;
+    color: #4a5568;
+    font-style: italic;        /* Ponemos el texto en cursiva para denotar que es una cita textual */
+    margin-bottom: 25px;
+}
+
+/* El footer dentro de la tarjeta (Guarda la foto y el nombre) */
+.testimonial-author {
+    display: flex;             /* Alinea la foto de perfil al lado del nombre en horizontal */
+    align-items: center;       /* Centrado vertical perfecto */
+    gap: 12px;                 /* Separa la foto del texto por 12px */
+    background: transparent;   /* Limpiamos cualquier estilo raro de footer común */
+    padding: 0;
+}
+
+/* CONTROL Y DISEÑO DE LAS FOTOS DE LOS TUTORES */
+.testimonial-author img {
+    width: 120px;              
+    height: 120px;             
+    object-fit: cover;         
+    border-radius: 12px;       
+    border: 3px solid var(--color-gris-linea);
+    
+    /* REGLA OBLIGATORIA: Le dice al navegador que suavice cualquier animación en la foto */
+    transition: transform 0.3s ease, border-color 0.3s ease; 
+}
+
+/* EFECTO HOVER: Qué pasa cuando el usuario pasa el mouse sobre LA FOTO */
+.testimonial-author img:hover {
+    transform: scale(1.5);    /* Agranda la foto a un 115% de su tamaño original */
+    border-color: var(--color-principal); /* Cambia el marco gris por el azul de tu marca */
+    cursor: pointer;           /* Transforma la flecha del mouse en una manito interactiva */
+}
+
+
+
+.author-info strong {
+    display: block;            /* Hace que el nombre se ponga arriba */
+    font-size: 0.95rem;
+    color: var(--color-oscuro);
+}
+
+.pet-info {
+    font-size: 0.85rem;        /* Letra más chiquita para el nombre de la mascota */
+    color: var(--color-principal);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   8. SECCIÓN CONTACTO Y FORMULARIO (CONTACT)
+   ========================================================================== */
+
+.contact {
+    background-color: var(--color-blanco); /* Volvemos al fondo blanco limpio */
+    padding: 80px 20px;
+}
+
+.contact-container {
+    max-width: 650px;          /* Restringimos el ancho para que el formulario no se estire feo */
+    margin: 0 auto;            /* Centra horizontalmente todo el bloque en la pantalla */
+}
+
+.contact h2 {
+    font-size: 2.2rem;
+    color: var(--color-oscuro);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* El bloque contenedor del formulario (form) */
+.booking-form {
+    background-color: var(--color-claro); /* Fondo grisáceo suave para que resalte la zona */
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--color-gris-linea);
+    margin-top: 40px;
+}
+
+/* Cada grupo de pregunta (Contiene el label y su respectivo input/select) */
+.form-group {
+    display: flex;
+    flex-direction: column;    /* Coloca el título de la pregunta ARRIBA del cuadro de texto */
+    gap: 8px;                  /* Espacio de 8px entre el título y el cuadro */
+    margin-bottom: 24px;       /* Separación amplia entre cada pregunta */
+}
+
+/* Los títulos de las preguntas (label) */
+.form-group label {
+    font-size: 0.95rem;
+    color: var(--color-oscuro);
+    font-weight: 600;          /* Letra seminegrita para que sea fácil de leer */
+}
+
+/* ESTILO PARA LOS CASILLEROS (Inputs, Selects y Textarea) */
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;               /* Ocupan todo el ancho disponible de la tarjeta */
+    padding: 12px 16px;        /* Colchón interno generoso para que las letras no queden apretadas */
+    font-family: var(--fuente-texto);
+    font-size: 16px;           /* ¡PUNTO OBLIGATORIO RÚBRICA! Tamaño base mínimo para accesibilidad */
+    color: var(--color-oscuro);
+    background-color: var(--color-blanco);
+    border: 1px solid #cbd5e1; /* Borde sutil gris intermedio */
+    border-radius: 10px;       /* Curvatura suave alineada a la marca */
+    transition: all 0.25s ease;/* Prepara la caja para animarse cuando el usuario haga clic */
+}
+
+/* El área de texto para el motivo de consulta */
+.booking-form textarea {
+    resize: vertical;          /* Solo permite que el usuario estire el cuadro hacia abajo, no hacia los lados */
+}
+
+/* INTERACCIÓN AVANZADA: Estado enfocado (:focus) */
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    outline: none;             /* Quita la línea negra tosca que pone el navegador por defecto */
+    border-color: var(--color-principal); /* El contorno se ilumina del azul de LomitosVet */
+    box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.15); /* Crea un anillo azul difuminado alrededor de la caja */
+    background-color: var(--color-blanco);
+}
+
+/* BOTÓN DE ENVÍO (Submit) */
+.btn-submit {
+    width: 100%;               /* Hace que el botón ocupe todo el ancho del formulario */
+    padding: 16px;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    border: none;              /* Quita el borde tosco de botón nativo */
+    border-radius: 30px;       /* Botón redondo estilo pastilla */
+    font-family: var(--fuente-texto);
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 180, 216, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover del botón de envío */
+.btn-submit:hover {
+    background-color: #0077b6;   /* Azul más clínico y oscuro */
+    transform: translateY(-2px); /* El botón se eleva levemente */
+    box-shadow: 0 6px 20px rgba(0, 180, 216, 0.4); /* La sombra se intensifica */
+}
+
+/* ==========================================================================
+   9. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+
+footer {
+    background-color: var(--color-oscuro); /* Usamos el gris oscuro corporativo de fondo */
+    color: #94a3b8;                         /* Un gris claro/plateado para que el texto contraste bien */
+    padding: 60px 20px 30px 20px;           /* Colchón amplio arriba, normal a los lados y menor abajo */
+    font-size: 0.9rem;                      /* Letra sutilmente más compacta para datos secundarios */
+}
+
+.footer-container {
+    display: flex;                          /* ¡Activamos Flexbox para armar las 3 columnas! */
+    justify-content: space-between;         /* Distribuye las columnas de extremo a extremo */
+    gap: 40px;                              /* Separación de 40px entre cada columna */
+    max-width: 1200px;                      /* Alineado al ancho del nav y del resto de la página */
+    margin: 0 auto;                         /* Centra el contenedor completo */
+}
+
+/* ESTILO PARA CADA UNA DE LAS 3 COLUMNAS */
+.footer-info, 
+.footer-links, 
+.footer-contact {
+    flex: 1;                                /* Las 3 columnas toman exactamente el mismo ancho */
+}
+
+/* Títulos de las columnas (h3 y h4) */
+footer h3, 
+footer h4 {
+    color: var(--color-blanco);             /* Títulos en blanco puro para que destaquen */
+    font-family: var(--fuente-titulos);     /* Tu fuente robusta corporativa */
+    margin-bottom: 20px;                    /* Espacio abajo de cada título */
+}
+
+footer h3 {
+    font-size: 1.5rem;                      /* El nombre de la marca es un poco más grande */
+}
+
+footer h4 {
+    font-size: 1.1rem;
+}
+
+footer p {
+    line-height: 1.6;                       /* Separación cómoda entre líneas de texto */
+    margin-bottom: 15px;
+}
+
+/* El texto pequeño del Copyright */
+.copyright {
+    font-size: 0.8rem;
+    color: #64748b;                         /* Un gris un poco más apagado para que no distraiga */
+    margin-top: 20px;
+}
+
+/* COLUMNA DE ENLACES RÁPIDOS (ul) */
+.footer-links ul {
+    list-style: none;                       /* Quitamos los puntitos de la lista */
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;                    /* Separación vertical entre cada enlace */
+}
+
+.footer-links a {
+    color: #94a3b8;                         /* Color base gris claro */
+    text-decoration: none;                  /* Sin subrayado */
+    transition: color 0.25s ease;           /* Animación suave para el cambio de color */
+}
+
+/* Hover de los enlaces del Footer */
+.footer-links a:hover {
+    color: var(--color-principal);          /* Se tiñen del azul de la marca al pasar el mouse */
+}
